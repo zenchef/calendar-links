@@ -44,12 +44,12 @@ class Link
             throw InvalidLink::invalidDateRange($from, $to);
         }
 
-        $this->from = $from->format('Ymd\THis');
-        $this->to = $to->format('Ymd\THis');
+        $this->from = $from;
+        $this->to = $to;
 
         if ($this->allDay) {
-            $this->from = $from->format('Ymd');
-            $this->to = $to->format('Ymd');
+            $this->from = $from;
+            $this->to = $to;
         }
     }
 
